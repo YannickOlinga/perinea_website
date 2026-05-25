@@ -1,0 +1,86 @@
+.overview {
+  position: relative;
+  background: #0d0d0d;
+  padding: 120px 80px 160px;
+}
+
+.overview__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ── Left column ── */
+.overview__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  position: sticky;
+  top: 120px;
+}
+
+.overview__eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+}
+
+.overview__product {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: -0.01em;
+}
+
+/* ── Right column — large fading text ── */
+.overview__text {
+  --reveal: 0;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black calc(var(--reveal) * 55% + 20%),
+    rgba(0, 0, 0, 0.15) calc(var(--reveal) * 75% + 35%),
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black calc(var(--reveal) * 55% + 20%),
+    rgba(0, 0, 0, 0.15) calc(var(--reveal) * 75% + 35%),
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+.overview__text p {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .overview {
+    padding: 80px 24px 120px;
+  }
+
+  .overview__inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .overview__label {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}

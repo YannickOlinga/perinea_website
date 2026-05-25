@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(rm -rf node_modules package-lock.json)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5174/)",
+      "Bash(npx playwright *)",
+      "Bash(cd /tmp && npm install playwright 2>&1 | tail -3)",
+      "Read(//private/tmp/**)",
+      "Bash(node verify_lifestyle.mjs)",
+      "WebFetch(domain:www.om.fr)",
+      "Bash(mkdir -p /Users/yannickolinga/Downloads/perinea_website/src/pages)"
+    ],
+    "additionalDirectories": [
+      "/Users/yannickolinga/Downloads/perinea_website/src"
+    ]
+  }
+}
