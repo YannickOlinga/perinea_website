@@ -1,34 +1,34 @@
-import deviceImg from '../assets/device.webp'
 import './BrandingPage.css'
 
 const COLORS = [
   {
-    name: 'Violet Perinea',
-    hex: '#aa3bff',
-    rgb: 'RVB 170 / 59 / 255',
-    desc: 'La couleur signature. Dynamique et mémorable, elle incarne l\'audace médicale et la féminité affirmée.',
+    name: 'Blanc Cassé',
+    hex: '#fcf8f5',
+    rgb: 'RVB 252 / 248 / 245',
+    desc: 'Fond principal. Chaleur douce et naturelle qui accueille le regard avec sérénité et légèreté.',
+    dark: false,
+    bordered: true,
+  },
+  {
+    name: 'Rose Claire',
+    hex: '#f7c5c8',
+    rgb: 'RVB 247 / 197 / 200',
+    desc: 'Accent délicat. La tendresse médicale, présente dans les sections secondaires et les transitions.',
     dark: false,
   },
   {
-    name: 'Nuit Profonde',
-    hex: '#0d0d0d',
-    rgb: 'RVB 13 / 13 / 13',
-    desc: 'Fond absolu. La profondeur qui met en valeur chaque élément et transmet la sophistication technique.',
+    name: 'Rose Perinea',
+    hex: '#c95f7b',
+    rgb: 'RVB 201 / 95 / 123',
+    desc: 'Couleur signature. Dynamique et mémorable, elle incarne la féminité affirmée et l\'audace médicale.',
     dark: true,
   },
   {
-    name: 'Lilas Doux',
-    hex: '#e8d4ff',
-    rgb: 'RVB 232 / 212 / 255',
-    desc: 'L\'accent délicat. Douceur et soin dans les interfaces secondaires et les moments de transition.',
-    dark: false,
-  },
-  {
-    name: 'Blanc Pur',
-    hex: '#ffffff',
-    rgb: 'RVB 255 / 255 / 255',
-    desc: 'Clarté clinique. Pureté et précision médicale pour les contextes lumineux et l\'impression.',
-    dark: false,
+    name: 'Bordeaux',
+    hex: '#571534',
+    rgb: 'RVB 87 / 21 / 52',
+    desc: 'Fond sombre et texte principal. Profondeur et sophistication qui donnent autorité et confiance.',
+    dark: true,
   },
 ]
 
@@ -44,23 +44,23 @@ const PHOTO_STYLES = [
   {
     level: 'NIVEAU 01',
     name: 'Clinique',
-    desc: 'Fond blanc, lumière neutre et diffuse. Le dispositif seul, sans distraction. Précision et confiance médicale absolues.',
-    filter: 'grayscale(0.6) contrast(1.15) brightness(1.05)',
-    imgUrl: 'https://cdn.prod.website-files.com/6842cbd0245d993ef9bf60ac/689f8d90d37cd20aae5b80f7_hero-iyo-one-1.webp',
+    desc: 'Fond neutre, lumière diffuse. Le dispositif seul, sans distraction. Précision et confiance médicale absolues.',
+    filter: 'grayscale(0.5) contrast(1.1) brightness(1.05)',
+    imgUrl: '/1.png',
   },
   {
     level: 'NIVEAU 02',
     name: 'Naturelle',
-    desc: 'Environnement authentique, lumière chaude et organique. La femme dans sa vie quotidienne, libre et confiante.',
-    filter: 'saturate(1.1) brightness(0.95)',
-    imgUrl: 'https://cdn.prod.website-files.com/6842cbd0245d993ef9bf60ac/68439bd3a2983055e473ea61_girl-image.webp',
+    desc: 'Tons chauds et organiques. Le dispositif dans son environnement, libre et élégant.',
+    filter: 'saturate(1.15) brightness(0.97) sepia(0.1)',
+    imgUrl: '/3.png',
   },
   {
     level: 'NIVEAU 03',
     name: 'Intime',
-    desc: 'Cadrage serré, flou de profondeur accentué, tons désaturés. La sensorialité, le corps, la récupération discrète.',
-    filter: 'saturate(0.4) brightness(0.75) blur(0.5px)',
-    imgUrl: 'https://cdn.prod.website-files.com/6842cbd0245d993ef9bf60ac/68439bd3a2983055e473ea61_girl-image.webp',
+    desc: 'Tons désaturés, contraste doux. La sensorialité, le soin, la récupération discrète.',
+    filter: 'saturate(0.3) brightness(0.8) blur(0.5px)',
+    imgUrl: '/4.png',
   },
 ]
 
@@ -114,7 +114,7 @@ function BrandingPage() {
           </p>
         </div>
         <div className="bp-hero__device">
-          <img src={deviceImg} alt="Perinea One" />
+          <img src="/1.png" alt="Perinea One" />
         </div>
         <div className="bp-hero__scroll" aria-hidden="true">↓</div>
       </section>
@@ -201,7 +201,7 @@ function BrandingPage() {
           {COLORS.map((c, i) => (
             <div
               key={i}
-              className={`bp-palette__swatch ${c.dark ? 'bp-palette__swatch--bordered' : ''}`}
+              className={`bp-palette__swatch ${c.bordered ? 'bp-palette__swatch--bordered' : ''}`}
               style={{ '--color': c.hex }}
             >
               <div className="bp-palette__swatch-fill" />
@@ -287,7 +287,7 @@ function BrandingPage() {
         <div className="bp-action__split">
           <div className="bp-action__panel bp-action__panel--device">
             <div className="bp-action__panel-visual">
-              <img src={deviceImg} alt="Perinea One" className="bp-action__device-img" />
+              <img src="/1.png" alt="Perinea One" className="bp-action__device-img" />
             </div>
             <div className="bp-action__panel-caption">
               <span className="bp-label">DISPOSITIF MÉDICAL</span>

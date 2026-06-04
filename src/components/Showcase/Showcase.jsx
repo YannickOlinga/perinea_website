@@ -1,6 +1,6 @@
 import './Showcase.css'
 
-const IMAGE_URL = 'https://cdn.prod.website-files.com/6842cbd0245d993ef9bf60ac/689f8d90d37cd20aae5b80f7_hero-iyo-one-1.webp'
+const IMAGE_URL = '/3.png'
 
 function Showcase() {
   return (

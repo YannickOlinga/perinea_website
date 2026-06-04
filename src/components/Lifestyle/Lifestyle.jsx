@@ -1,7 +1,5 @@
 import './Lifestyle.css'
 
-const IMAGE_URL = 'https://cdn.prod.website-files.com/6842cbd0245d993ef9bf60ac/68439bd3a2983055e473ea61_girl-image.webp'
-
 const CARDS = [
   {
     category: 'CAPTEURS MÉDICAUX',
@@ -32,8 +30,7 @@ const CARDS = [
 function Lifestyle() {
   return (
     <section className="lifestyle">
-      <img src={IMAGE_URL} alt="" className="lifestyle__bg" loading="lazy" />
-      <div className="lifestyle__overlay" />
+      <img src="/4.png" alt="" className="lifestyle__product-deco" aria-hidden="true" />
 
       <div className="lifestyle__body">
         <div className="lifestyle__text">

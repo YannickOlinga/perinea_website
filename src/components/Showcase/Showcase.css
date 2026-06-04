@@ -1,6 +1,6 @@
 .showcase {
   position: relative;
-  background: #f5f4f0;
+  background: #f7c5c8;
   border-radius: 24px 24px 0 0;
   overflow: hidden;
   padding: 80px 80px 60px;
@@ -23,7 +23,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(87, 21, 52, 0.2);
 }
 
 /* ── Product image ── */
@@ -42,7 +42,7 @@
   object-fit: contain;
   user-select: none;
   pointer-events: none;
-  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.12));
+  filter: drop-shadow(0 30px 60px rgba(87, 21, 52, 0.15));
 }
 
 /* ── Footer ── */
@@ -52,7 +52,7 @@
   gap: 40px;
   align-items: end;
   padding-top: 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(87, 21, 52, 0.12);
 }
 
 .showcase__footer-left {
@@ -65,14 +65,14 @@
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.16em;
-  color: rgba(0, 0, 0, 0.35);
+  color: rgba(87, 21, 52, 0.45);
   text-transform: uppercase;
 }
 
 .showcase__title {
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 600;
-  color: #0d0d0d;
+  color: #571534;
   letter-spacing: -0.03em;
   line-height: 1.05;
   margin: 0;
@@ -88,7 +88,7 @@
 .showcase__desc {
   font-size: 15px;
   line-height: 1.65;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(136, 94, 80, 0.85);
   margin: 0;
   max-width: 480px;
 }

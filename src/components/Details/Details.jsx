@@ -1,18 +1,17 @@
-import deviceImg from '../../assets/device.webp'
 import './Details.css'
 
 const ANNOTATIONS = [
   {
     id: 1,
-    x: '62%',
-    y: '18%',
+    x: '60%',
+    y: '14%',
     title: 'capteurs biomédicaux',
     desc: 'Électrodes intégrées de précision médicale, conçues pour une mesure fiable de l\'activité musculaire périnéale.',
   },
   {
     id: 2,
-    x: '20%',
-    y: '52%',
+    x: '12%',
+    y: '58%',
     title: 'module de connectivité',
     desc: 'Bluetooth 5.3 basse consommation, synchronisation en temps réel avec l\'application Perinea.',
   },
@@ -31,14 +30,26 @@ function Details() {
         <div className="details__stage">
           <div className="details__product-wrap">
 
-            {/* Product image */}
-            <img
-              src={deviceImg}
-              alt="Perinea One"
-              className="details__device-img"
+            {/* Interactive 3D model — drag to rotate */}
+            <model-viewer
+              src="/sonde%20rose.glb"
+              alt="Perinea One — modèle 3D interactif"
+              camera-controls=""
+              auto-rotate=""
+              auto-rotate-delay="800"
+              rotation-per-second="18deg"
+              shadow-intensity="0.5"
+              shadow-softness="1"
+              exposure="1.15"
+              camera-orbit="20deg 80deg 1.1m"
+              min-camera-orbit="auto auto 0.2m"
+              max-camera-orbit="auto auto 0.5m"
+              environment-image="neutral"
+              poster="/1.png"
+              class="details__model-viewer"
             />
 
-            {/* Annotations */}
+            {/* Annotation overlays */}
             {ANNOTATIONS.map((a) => (
               <div
                 key={a.id}

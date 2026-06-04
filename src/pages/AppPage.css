@@ -1,0 +1,508 @@
+.ap {
+  background: #fcf8f5;
+  color: #571534;
+  min-height: 100svh;
+}
+
+.ap-eyebrow {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: rgba(136, 94, 80, 0.6);
+  text-transform: uppercase;
+}
+
+/* ── HERO ── */
+.ap-hero {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  padding: 120px 80px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ap-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ap-hero__title {
+  font-size: clamp(40px, 4.5vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  margin: 14px 0 20px;
+  color: #571534;
+}
+
+.ap-hero__sub {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(136, 94, 80, 0.85);
+  margin: 0 0 36px;
+  max-width: 480px;
+}
+
+.ap-hero__download {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ap-store-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(87, 21, 52, 0.06);
+  border: 1px solid rgba(87, 21, 52, 0.14);
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: #571534;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+  cursor: pointer;
+}
+
+.ap-store-btn:hover {
+  background: rgba(87, 21, 52, 0.1);
+  border-color: rgba(87, 21, 52, 0.24);
+}
+
+.ap-store-btn span {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ap-store-btn small {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(136, 94, 80, 0.65);
+}
+
+.ap-hero__beta {
+  font-size: 12px;
+  color: rgba(136, 94, 80, 0.55);
+  margin: 16px 0 0;
+}
+
+/* ── PHONE MOCKUPS ── */
+.ap-hero__phones {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: -20px;
+  position: relative;
+}
+
+.ap-phone {
+  border-radius: 32px;
+  border: 1px solid rgba(87, 21, 52, 0.12);
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(87, 21, 52, 0.12);
+  position: relative;
+  background: #571534;
+}
+
+.ap-phone--primary {
+  width: 220px;
+  z-index: 2;
+  box-shadow:
+    0 40px 80px rgba(87, 21, 52, 0.15),
+    0 0 60px rgba(201, 95, 123, 0.15);
+}
+
+.ap-phone--secondary {
+  width: 190px;
+  margin-left: -30px;
+  margin-bottom: -20px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.ap-phone__notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 24px;
+  background: #571534;
+  border-radius: 0 0 16px 16px;
+  z-index: 10;
+}
+
+.ap-phone__screen {
+  background: #3d1020;
+  padding: 36px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  min-height: 380px;
+}
+
+.ap-phone__topbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.ap-phone__topbar span:first-child {
+  font-weight: 600;
+  color: #fcf8f5;
+}
+
+.ap-phone__topbar span:last-child {
+  color: rgba(247, 197, 200, 0.45);
+  font-size: 11px;
+}
+
+/* Primary phone: ring area */
+.ap-phone__ring-area {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.ap-phone__ring-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 197, 200, 0.4);
+}
+
+.ap-phone__ring-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #f7c5c8;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 14px rgba(247, 197, 200, 0.8);
+}
+
+.ap-phone__session-lbl {
+  font-size: 10px;
+  color: rgba(247, 197, 200, 0.4);
+  letter-spacing: 0.08em;
+  margin: 0 0 4px;
+}
+
+.ap-phone__session-time {
+  font-size: 26px;
+  font-weight: 300;
+  color: #fcf8f5;
+  letter-spacing: -0.04em;
+  margin: 0 0 16px;
+}
+
+.ap-phone__stats {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(247, 197, 200, 0.08);
+  border-radius: 10px;
+  padding: 10px 0;
+  margin-bottom: 12px;
+}
+
+.ap-phone__stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.ap-phone__stat span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fcf8f5;
+}
+
+.ap-phone__stat small {
+  font-size: 9px;
+  color: rgba(247, 197, 200, 0.4);
+}
+
+.ap-phone__stat-div {
+  width: 1px;
+  height: 26px;
+  background: rgba(247, 197, 200, 0.12);
+}
+
+.ap-phone__btn {
+  width: 100%;
+  background: rgba(201, 95, 123, 0.25);
+  border: 1px solid rgba(247, 197, 200, 0.35);
+  color: rgba(247, 197, 200, 0.95);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Secondary phone: chart */
+.ap-phone__chart {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  margin: 0 0 8px;
+}
+
+.ap-phone__bar {
+  flex: 1;
+  background: #c95f7b;
+  border-radius: 3px 3px 0 0;
+}
+
+.ap-phone__chart-label {
+  font-size: 10px;
+  color: rgba(247, 197, 200, 0.4);
+  margin: 0 0 20px;
+  align-self: flex-start;
+}
+
+.ap-phone__metrics {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(247, 197, 200, 0.08);
+  border-radius: 10px;
+  padding: 12px 0;
+}
+
+.ap-phone__metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.ap-phone__metric span {
+  font-size: 17px;
+  font-weight: 600;
+  color: #f7c5c8;
+}
+
+.ap-phone__metric small {
+  font-size: 9px;
+  color: rgba(247, 197, 200, 0.4);
+}
+
+/* ── FEATURES ── */
+.ap-features {
+  padding: 100px 80px;
+  background: #f7c5c8;
+}
+
+.ap-features__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ap-features__title {
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 12px 0 60px;
+  color: #571534;
+}
+
+.ap-features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.ap-feat {
+  background: rgba(252, 248, 245, 0.6);
+  border: 1px solid rgba(87, 21, 52, 0.1);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s;
+}
+
+.ap-feat:hover {
+  background: rgba(252, 248, 245, 0.85);
+}
+
+.ap-feat__num {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(201, 95, 123, 0.65);
+  font-weight: 500;
+}
+
+.ap-feat__name {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #571534;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.ap-feat__desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(136, 94, 80, 0.8);
+  margin: 0;
+}
+
+/* ── STEPS ── */
+.ap-steps {
+  padding: 100px 80px;
+  background: #fcf8f5;
+}
+
+.ap-steps__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ap-steps__inner h2 {
+  font-size: clamp(26px, 2.8vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 12px 0 56px;
+  color: #571534;
+}
+
+.ap-steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ap-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.ap-step__num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 95, 123, 0.4);
+  color: #c95f7b;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(201, 95, 123, 0.08);
+}
+
+.ap-step__body {
+  padding-top: 8px;
+}
+
+.ap-step__body strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: #571534;
+  margin-bottom: 6px;
+}
+
+.ap-step__body p {
+  font-size: 14px;
+  color: rgba(136, 94, 80, 0.75);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.ap-step__connector {
+  width: 1px;
+  height: 40px;
+  background: rgba(201, 95, 123, 0.25);
+  margin-left: 19px;
+}
+
+/* ── CTA BANNER ── */
+.ap-cta {
+  padding: 100px 80px;
+  background: #571534;
+  border-top: 1px solid rgba(247, 197, 200, 0.1);
+}
+
+.ap-cta__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.ap-cta__inner h2 {
+  font-size: clamp(24px, 3vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: #fcf8f5;
+}
+
+.ap-cta__inner p {
+  font-size: 15px;
+  color: rgba(247, 197, 200, 0.65);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.ap-cta__btn {
+  display: inline-block;
+  background: #c95f7b;
+  color: #fcf8f5;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 16px 36px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.ap-cta__btn:hover {
+  background: #b44f6a;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .ap-hero { grid-template-columns: 1fr; padding: 100px 40px 60px; }
+  .ap-hero__phones { margin: 40px 0 0; }
+  .ap-features, .ap-steps, .ap-cta { padding: 80px 40px; }
+  .ap-features__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .ap-hero { padding: 100px 24px 60px; }
+  .ap-features, .ap-steps, .ap-cta { padding: 80px 24px; }
+  .ap-features__grid { grid-template-columns: 1fr 1fr; }
+  .ap-hero__phones { display: none; }
+}
