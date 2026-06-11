@@ -4,6 +4,8 @@ import Hero from './components/Hero/Hero'
 import Overview from './components/Overview/Overview'
 import Features from './components/Features/Features'
 import Details from './components/Details/Details'
+import Banner from './components/Banner/Banner'
+import Spotlight from './components/Spotlight/Spotlight'
 import Lifestyle from './components/Lifestyle/Lifestyle'
 import Showcase from './components/Showcase/Showcase'
 import BrandingPage from './pages/BrandingPage'
@@ -27,7 +29,9 @@ function App() {
       <Hero />
       <Overview />
       <Features />
-      <Details />
+      {/* <Details /> — réservé pour plus tard */}
+      <Banner />
+      <Spotlight />
       <Lifestyle />
       <Showcase />
       <Footer />
